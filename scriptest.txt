@@ -1,0 +1,3 @@
+pwd "
+&& apt-get update && apt install nginx -y && cd /etc/nginx/sites-available/ && rm default && cd .. && cd sites-enabled && rm default && cd .. && cp /home/ubuntu/ec2-denys.mar.co.ua.conf /etc/nginx/sites-available/ && ln -s /etc/nginx/sites-available/ec2-denys.mar.co.ua.conf /etc/nginx/sites-enabled/ && nginx -t && nginx -s reload && apt install openjdk-8-jre-headless -y && wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add - && sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list' && apt-get update && apt install jenkins -y && systemctl start jenkins
+
